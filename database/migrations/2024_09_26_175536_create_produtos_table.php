@@ -12,12 +12,16 @@ class CreateProdutosTable extends Migration
      * @return void
      */
     public function up()
-    {
-        Schema::create('produtos', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
-    }
+{
+    Schema::create('produtos', function (Blueprint $table) {
+        $table->id();
+        $table->string('nome');
+        $table->decimal('preco', 8, 2);
+        $table->integer('quantidade');
+        $table->timestamps();
+    });
+}
+
 
     /**
      * Reverse the migrations.
